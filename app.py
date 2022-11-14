@@ -1,5 +1,6 @@
 import streamlit as st
 from scrape import getData
+import pandas as pd
 
 info = {}
 repo_info = {}
@@ -23,3 +24,19 @@ if userName != '':
         st.table(repo_info)
     except:
         st.subheader("User doesn't exist")
+        
+df = pd.DataFrame(repo_info)
+
+@st.cache
+def convert_df(df):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return df.to_csv().encode('utf-8')
+
+csv = convert_df(my_large_df)
+
+st.download_button(
+    label="Download profile data as CSV",
+    data=csv,
+    file_name='large_df.csv',
+    mime='text/csv',
+)
