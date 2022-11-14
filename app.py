@@ -4,7 +4,7 @@ from scrape import getData
 info = {}
 repo_info = {}
 
-st.title("Github Scraper")
+st.title("Awesome Github Profile Scraper")
 userName = st.text_input('Enter Github Username')
 
 if userName != '':
