@@ -20,7 +20,7 @@ if userName != '':
                 )
             else:
                 st.image(value)
-        st.subheader(" Recent Repositories")
+        st.subheader("Recent Repositories")
         st.table(repo_info)
     except:
         st.subheader("User doesn't exist")
@@ -34,9 +34,8 @@ def convert_df(df):
 
 csv = convert_df(df)
 
-st.download_button(
-    label="Download profile data as CSV",
+if key or value != 0:
+    st.download_button(label="Download profile data as CSV",
     data=csv,
     file_name='Gh_profile_df.csv',
-    mime='text/csv',
-)
+    mime='text/csv')
