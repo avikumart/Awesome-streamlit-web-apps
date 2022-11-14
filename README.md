@@ -1,6 +1,6 @@
 # Awesome-streamlit-web-apps
 
-Here are the list of web apps and its description:
+Here are the list of web apps and their descriptions:
 
 # 1. Github profile scraper
 
