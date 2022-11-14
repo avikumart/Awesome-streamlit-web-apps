@@ -34,7 +34,7 @@ def convert_df(df):
 
 csv = convert_df(df)
 
-if key or value != 0:
+if userName != '':
     st.download_button(label="Download profile data as CSV",
     data=csv,
     file_name='Gh_profile_df.csv',
