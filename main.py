@@ -4,7 +4,7 @@ import time
 
 # streamlit UI
 
-st.header("Transcribe Audio")
+st.header("Transcribe Your Audio Files")
 fileObject = st.file_uploader(label = "Please upload your file" )
 
 
