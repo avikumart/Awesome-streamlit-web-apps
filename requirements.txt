@@ -2,4 +2,4 @@ os-sys
 python-dotenv
 requests
 streamlit
-time
+python-time
