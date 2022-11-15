@@ -25,10 +25,10 @@ if fileObject:
     for percent in range(percent_complete,101):
         time.sleep(sleep_duration)
         progress_bar.progress(percent)
-
-st.balloons()
-st.header("Transcribed Text")
-st.subheader(result['text'])
+        # streamlit UT
+        st.balloons()
+        st.header("Transcribed Text")
+        st.subheader(result['text'])
 
 # further scope:
 #1) AssemblyAI lets the user specify the acoustic model and/or language model. 
