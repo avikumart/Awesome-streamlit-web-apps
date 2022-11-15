@@ -1,5 +1,5 @@
 os-sys
-dotenv
+python-dotenv
 requests
 streamlit
 time
