@@ -19,7 +19,7 @@ def get_url(token,data):
     data=data)
     url = response.json()["upload_url"]
     print("Uploaded File and got temporary URL to file")
-    return URL
+    return url
     
 # helper function 2 - Uploading a file for transcription
 def get_transcribe_id(token,url):
