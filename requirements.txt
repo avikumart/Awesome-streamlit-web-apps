@@ -1,4 +1,4 @@
-os
+os-sys
 dotenv
 requests
 streamlit
