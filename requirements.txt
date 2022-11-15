@@ -1,5 +1,3 @@
-os-sys
 python-dotenv
 requests
 streamlit
-python-time
