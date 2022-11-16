@@ -19,7 +19,7 @@ if url != '':
     
     if len(video) > 0:
         downloaded , download_audio = False , False
-        download_video = st.button("Download Video", data=video)
+        download_video = st.button("Download Video")
         if yt.streams.filter(only_audio=True):
             download_audio = st.button("Download Audio Only")
         if download_video:
