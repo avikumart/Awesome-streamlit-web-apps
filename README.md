@@ -14,3 +14,8 @@ Here are the list of web apps and their descriptions:
 **Description:** A streamlit web app to upload audio files and transcribe them using Assembly.ai's Audio transcription APIs.
 
 ### WebApp link: https://avikumart-awesome-streamlit-web-apps-main-audio-transcri-k7vtmd.streamlit.app/
+
+---------------------------
+# 3. YT video downloader
+
+**Description:** A streamlit web app to download YouTube videos and audio files
