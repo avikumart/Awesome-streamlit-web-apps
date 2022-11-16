@@ -17,12 +17,12 @@ if url != '':
         download_video = st.download_button("Download Video", data=video)
         if yt.streams.filter(only_audio=True):
             download_audio = st.download_button("Download Audio Only", data=video.filter(only_audio=True)
-        if download_video:
+        if download_video == True:
             # video.get_lowest_resolution().download()
-            downloaded = True
-        if download_audio:
+            downloaded == True
+        if download_audio == True:
             # video.filter(only_audio=True).first().download()
-            downloaded = True
+            downloaded == True
         if downloaded:
             st.subheader("Download Complete")
             import subprocess
