@@ -12,16 +12,21 @@ if url != '':
     ## Rating: {} 
     '''.format(yt.title , yt.length , yt.rating))
     video = yt.streams
+    audio = yt.streams.filter(only_audio=True)
+    audio_bytes = audio.read()
+    # display audio on UI side
+    st.audio(audio_bytes, format='audio/ogg')
+    
     if len(video) > 0:
         downloaded , download_audio = False , False
-        download_video = st.download_button("Download Video", data=video)
+        download_video = st.button("Download Video", data=video)
         if yt.streams.filter(only_audio=True):
-            download_audio = st.download_button("Download Audio Only", data=video.filter(only_audio=True))
+            download_audio = st.button("Download Audio Only")
         if download_video:
-           # video.get_lowest_resolution().download()
+           video.get_lowest_resolution().download()
             downloaded == True
         if download_audio:
-           # video.filter(only_audio=True).first().download()
+            video.filter(only_audio=True).first().download()
             downloaded == True
         if downloaded:
             st.subheader("Download Complete")
