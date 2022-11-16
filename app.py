@@ -16,12 +16,12 @@ if url != '':
         downloaded , download_audio = False , False
         download_video = st.download_button("Download Video", data=video)
         if yt.streams.filter(only_audio=True):
-            download_audio = st.download_button("Download Audio Only", data=video.filter(only_audio=True)
-        if download_video == True:
-            # video.get_lowest_resolution().download()
+            download_audio = st.download_button("Download Audio Only", data=video.filter(only_audio=True))
+        if download_video:
+           # video.get_lowest_resolution().download()
             downloaded == True
-        if download_audio == True:
-            # video.filter(only_audio=True).first().download()
+        if download_audio:
+           # video.filter(only_audio=True).first().download()
             downloaded == True
         if downloaded:
             st.subheader("Download Complete")
