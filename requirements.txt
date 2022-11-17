@@ -2,6 +2,6 @@ beautifulsoup4
 pandas
 requests
 streamlit
-PIL
+Pillow
 wordcloud
 matplotlib
