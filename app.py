@@ -11,10 +11,15 @@ if url != '':
     {}
     ## Length: {} seconds
     ## Rating: {} 
-    '''.format(yt.title , yt.length , yt.rating))
+    ## Views: {}
+    ## Metadata: {}
+    '''.format(yt.title , yt.length , yt.rating, yt.views, yt.metadata))
     video = yt.streams
     audio = yt.streams.filter(only_audio=True)
-    video_path = pytube.Stream(video.get_lowest_resolution().download())
+    
+    # yt video display
+    video_path = yt.Stream.download(filename='myvideo.mp4')
+    video_file = open('myvideo.mp4', 'rb')
     video_bytes = video_path.read()
     st.video(video_bytes, format="video/mp4")
     
