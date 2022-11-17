@@ -16,9 +16,11 @@ if url != '':
     '''.format(yt.title , yt.length , yt.rating, yt.views, yt.metadata))
     video = yt.streams
     audio = yt.streams.filter(only_audio=True)
-    #audio_bytes = audio.read()
-    # display audio on UI side
-    #st.audio(audio_bytes, format='audio/ogg')
+    stream = yt.streams.get_by_itag(22)
+    audio__bytes = stream.download()
+    audio_bytes = audio.read()
+    #display audio on UI side
+    st.audio(audio_bytes, format='audio/ogg')
     
     if len(video) > 0:
         downloaded , download_audio = False , False
