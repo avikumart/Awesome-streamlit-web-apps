@@ -16,7 +16,7 @@ if url != '':
     audio = yt.streams.filter(only_audio=True)
     video_path = pytube.Stream.download(video.get_lowest_resolution().download())
     video_bytes = video_path.read()
-    st.video(video_bytes)
+    st.video(video_bytes, format="video/mp4")
     
     #audio_bytes = audio.read()
     # display audio on UI side
