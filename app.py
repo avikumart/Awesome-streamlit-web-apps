@@ -16,13 +16,6 @@ if url != '':
     '''.format(yt.title , yt.length , yt.rating, yt.views, yt.metadata))
     video = yt.streams
     audio = yt.streams.filter(only_audio=True)
-    
-    # yt video display
-    video_path = yt.Stream.download(filename='myvideo.mp4')
-    video_file = open('myvideo.mp4', 'rb')
-    video_bytes = video_file.read()
-    st.video(video_bytes, format="video/mp4")
-    
     #audio_bytes = audio.read()
     # display audio on UI side
     #st.audio(audio_bytes, format='audio/ogg')
