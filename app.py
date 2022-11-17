@@ -1,4 +1,5 @@
 import streamlit as st
+import pytube
 from pytube.__main__ import YouTube
 st.title("Youtube Video Downloader")
 st.subheader("Enter the URL:")
@@ -13,6 +14,10 @@ if url != '':
     '''.format(yt.title , yt.length , yt.rating))
     video = yt.streams
     audio = yt.streams.filter(only_audio=True)
+    video_path = pytube.Stream.download(video)
+    video_bytes = video_path.read()
+    st.video(video_bytes)
+    
     #audio_bytes = audio.read()
     # display audio on UI side
     #st.audio(audio_bytes, format='audio/ogg')
