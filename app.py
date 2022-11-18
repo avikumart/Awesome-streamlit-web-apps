@@ -8,6 +8,7 @@ import numpy as np
 from PIL import Image
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from main import *
 
 def load_data():
     with open('data/weekly.json','r') as file:
