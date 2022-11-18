@@ -66,19 +66,19 @@ for date in dates:
     keywords[date] = get_keywords(date)
 
 print("Dumping into file")
-with open('data/weekly.json','w') as file:
+with open('weekly.json','w') as file:
     json.dump(keywords,file)
 duration = time.time() - start
 print(f"Scraping Completed :) took {duration} seconds")
 
 print("Collecting combined result")
-with open('data/weekly.json' , 'r') as file:
+with open('weekly.json' , 'r') as file:
     keywords = json.load(file)
     combined_result = {}
     for date , week_keyword in keywords.items():
         for keyword in week_keyword:
             combined_result[keyword] = combined_result.get(keyword,0) + week_keyword[keyword]
     print("Dumping into file")
-    with open('data/combined.json','w') as file:
+    with open('combined.json','w') as file:
         json.dump(combined_result,file)
     print(f"Done :D Got {len(combined_result)} keywords")
