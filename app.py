@@ -24,7 +24,7 @@ def get_word_cloud(image,data,max_words,max_font_size):
                    max_font_size,background_color='white',
                    ).generate_from_frequencies(data)
     else:
-       path = f'data/image_masks/{image}.jpg'
+       path = f'{image}.jpg'
        mask = np.array(Image.open(path))
        wordcloud = WordCloud(width=400, height=400, repeat=True, 
                    max_words=max_words,max_font_size=   
