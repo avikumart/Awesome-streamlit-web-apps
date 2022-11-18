@@ -20,4 +20,11 @@ Here are the list of web apps and their descriptions:
 
 **Description:** A streamlit web app to download YouTube videos and audio files
 
-### WebApp Link: https://avikumart-awesome-streamlit-web-apps-app-yt-downloader-dneokz.streamlit.app/
+### WebApp link: https://avikumart-awesome-streamlit-web-apps-app-yt-downloader-dneokz.streamlit.app/
+
+---------------------------
+# 3. YT video downloader
+
+**Description:** A web application to display wordcloud of trending twitter hashtags and google keywords
+
+### WebApp link: https://avikumart-awesome-streamlit-web-apps-app-twitter-trends--krlg8w.streamlit.app/
