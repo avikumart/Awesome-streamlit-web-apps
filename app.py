@@ -10,9 +10,9 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 def load_data():
-    with open('data/weekly.json','r') as file:
+    with open('weekly.json','r') as file:
          weekly_keywords = json.load(file)
-    with open('data/combined.json') as file:
+    with open('combined.json') as file:
          combined_keyword = json.load(file)
     dates = [date for date in weekly_keywords]
     return combined_keyword,weekly_keywords,dates
