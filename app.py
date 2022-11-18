@@ -19,14 +19,14 @@ def load_data():
 
 def get_word_cloud(image,data,background_color,repeat,max_words,max_font_size):
     if image == 'default':
-       wordcloud = WordCloud(width=700, height=400, repeat=True,   
+       wordcloud = WordCloud(width=700, height=400, repeat=repeat,   
                    max_words=max_words, max_font_size=   
                    max_font_size,background_color=background_color,
                    ).generate_from_frequencies(data)
     else:
        path = f'{image}.jpg'
        mask = np.array(Image.open(path))
-       wordcloud = WordCloud(width=400, height=400, repeat=True, 
+       wordcloud = WordCloud(width=400, height=400, repeat=repeat, 
                    max_words=max_words,max_font_size=   
                    max_font_size,background_color=background_color,
                    mask = mask).generate_from_frequencies(data)
