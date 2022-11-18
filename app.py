@@ -57,7 +57,7 @@ st.pyplot(fig1)
 st.header("Weekly")
 date = st.selectbox(label='Select Date',options=dates)
 keywords = weekly_keywords[date]
-wordcloud = get_word_cloud(image,weekly_keywords,background_color,repeat,maxWords,maxFontSize)
+wordcloud = get_word_cloud(image,keywords,background_color,repeat,maxWords,maxFontSize)
 fig2 = plt.figure()
 plt.imshow(wordcloud)
 plt.axis("off")
