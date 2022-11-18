@@ -23,7 +23,7 @@ Here are the list of web apps and their descriptions:
 ### WebApp link: https://avikumart-awesome-streamlit-web-apps-app-yt-downloader-dneokz.streamlit.app/
 
 ---------------------------
-# 3. YT video downloader
+# 4. Twitter hashtags and Google Trends wordcloud generator 
 
 **Description:** A web application to display wordcloud of trending twitter hashtags and google keywords
 
