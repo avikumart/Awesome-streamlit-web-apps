@@ -17,18 +17,18 @@ def load_data():
     dates = [date for date in weekly_keywords]
     return combined_keyword,weekly_keywords,dates
 
-def get_word_cloud(image,data,max_words,max_font_size):
+def get_word_cloud(image,data,background_color,repeat,max_words,max_font_size):
     if image == 'default':
        wordcloud = WordCloud(width=700, height=400, repeat=True,   
                    max_words=max_words, max_font_size=   
-                   max_font_size,background_color='white',
+                   max_font_size,background_color=background_color,
                    ).generate_from_frequencies(data)
     else:
        path = f'{image}.jpg'
        mask = np.array(Image.open(path))
        wordcloud = WordCloud(width=400, height=400, repeat=True, 
                    max_words=max_words,max_font_size=   
-                   max_font_size,background_color='white',
+                   max_font_size,background_color=background_color,
                    mask = mask).generate_from_frequencies(data)
     return wordcloud
 
@@ -48,7 +48,7 @@ combined_keyword,weekly_keywords,dates = load_data()
 
 
 st.header("Entire Year")
-wordcloud = get_word_cloud(image,combined_keyword,800,15)
+wordcloud = get_word_cloud(image,combined_keyword,background_color,repeat,maxWords,maxFontSize)
 fig1 = plt.figure()
 plt.imshow(wordcloud)
 plt.axis("off")
@@ -57,7 +57,7 @@ st.pyplot(fig1)
 st.header("Weekly")
 date = st.selectbox(label='Select Date',options=dates)
 keywords = weekly_keywords[date]
-wordcloud = get_word_cloud(image , keywords,200,25)
+wordcloud = get_word_cloud(image,weekly_keywords,background_color,repeat,maxWords,maxFontSize)
 fig2 = plt.figure()
 plt.imshow(wordcloud)
 plt.axis("off")
