@@ -7,5 +7,5 @@ df = pd.read_csv("bank.csv")
 
 
 # editable dataframe
-st.markdown(<h1>"Edit the dataframe to update customers' data"</h1>)
+st.markdown("<h1 style='text-align: center;'>Edit the dataframe to update customer data</h1>", unsafe_allow_html=True)
 edit_df = st.experimental_data_editor(df)
