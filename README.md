@@ -2,6 +2,10 @@
 
 Here are the list of web apps and their descriptions:
 
+### Published article on Analytics Vidhya
+
+- [Click here to know more](https://www.analyticsvidhya.com/blog/2022/12/streamlit-tutorial-building-web-apps-with-code-examples/)
+
 # 1. Github Profile Scraper
 
 **Description:** In this app, I have used beautifulsoup library for scraping Github Profiles. scrap.py extracts github profiles and it is displayed on client side via streamlit library of python. Also it allows users to download profile data as a CSV file.
