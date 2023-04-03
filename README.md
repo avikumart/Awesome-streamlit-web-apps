@@ -37,4 +37,10 @@ Here are the list of web apps and their descriptions:
 
 **Description:** A web application to display wordcloud of trending twitter hashtags and google keywords
 
-### WebApp link: https://avikumart-awesome-streamlit-web-apps-app-twitter-trends--krlg8w.streamlit.app/
+### WebApp link: https://wordcloud-twitter-googl-display.streamlit.app/
+
+![image](https://user-images.githubusercontent.com/88608935/229494904-6afbbe68-1f3f-4d58-a3db-42387cda2478.png)
+
+![image](https://user-images.githubusercontent.com/88608935/229494986-8daa8dc5-9012-4aff-b09d-aa920cabe3bb.png)
+
+
